@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Contato</title>
+</head>
+<body>
+    <header class="header-home">
+        <a href="/"><span class="title-header">Agenda Online</span></a>
+        <% if(!session.user) { %>
+            <a href="/login" id="btnLoginHeader">Login</a>
+        <% } %> 
+        <% if(session.user) { %>
+            <a href="/profile" class="profile-header" id="meuPerfil"><span>Meu Perfil</span><img src="assets/images/profile.png" width="30px" height="30px"></a>
+        <% } %> 
+    </header>
+    <main class="main-contato">
+        <h2>Edite um contato na Agenda</h2>
+
+        <%- include('includes/messages') %>
+
+        
+    <form action="/contato/edit/<%- contato.id %>" method="post" class="contato-form">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <div class="formsContato">
+        <label for="nome">Nome:</label><input value="<%- contato.nome %>" type="text" name="nome" id="nome" required></p>
+        <label for="sobrenome">Sobrenome:</label><input value="<%- contato.sobrenome %>" type="text" name="sobrenome" id="sobrenome" >
+        <label for="email">Email:</label><input value="<%- contato.email %>" type="email" name="email" id="email"></p>
+        <label for="telefone">Telefone: </label><input value="<%- contato.telefone %>" type="tel" name="telefone" id="telefone">
+        </div>
+        <button class="btnSalvarContato">Editar Contato</button>
+    </form>
+    </main>
+    <script src="assets/js/bundle.js" type="text/javascript"></script>
+</body>
+</html>

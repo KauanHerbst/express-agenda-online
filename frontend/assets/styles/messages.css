@@ -1,0 +1,19 @@
+.message-erro {
+    text-align: center;
+    font-size: .6em;
+    background-color: rgb(250, 126, 126);
+    padding: .7em;
+    border-radius: .5em;
+    box-shadow: .2em .2em 1em rgba(0, 0, 0, 0.322);
+    margin: 1em;
+}
+
+.message-success {
+    text-align: center;
+    font-size: .6em;
+    background-color: rgb(94, 241, 94);
+    padding: .7em;
+    border-radius: .5em;
+    box-shadow: .2em .2em 1em rgba(0, 0, 0, 0.322);
+    margin: 1em;
+}

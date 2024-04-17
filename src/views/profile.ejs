@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Agenda Online</title>
+</head>
+<body>
+    <header class="header-login">
+        <a href="/"><span class="title-header">Agenda Online</span></a>
+    </header>
+    <main class="main-perfil">
+        <h2>Olá <%- session.user.nome %></h2>
+        <span>Seja Bem vindo ao seu perfil da Agenda Online</span>
+        <span>Email: <%- session.user.email%></span>
+        <div class="divBtnD">
+            <a href="/logout" class ="btnDesconectar">Desconectar</a>
+        </div>
+    </main>
+    <script src="assets/js/bundle.js"></script>
+</body>
+</html>

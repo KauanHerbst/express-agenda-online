@@ -1,0 +1,8 @@
+import './assets/styles/login.css'
+import './assets/styles/new.css'
+import './assets/styles/home.css'
+import './assets/styles/error404.css'
+import './assets/styles/messages.css'
+import './assets/styles/profile.css'
+import './assets/styles/contato.css'
+import './assets/images/profile.png'

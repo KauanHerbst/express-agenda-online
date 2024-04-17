@@ -1,0 +1,116 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0em;
+    margin: 0em;
+}
+
+body {
+    background-image: linear-gradient(to right, #00CCBF, #72F2EB);
+    height: 100%;
+}
+
+.header-login {
+    display: flex;
+    position: relative;
+    height: 100%;
+    padding: .7em;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: .5em;
+    box-shadow: .3em .3em 1em rgba(0, 0, 0, 0.432);
+}
+
+.main-login {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: .5em;
+    box-shadow: .3em .3em 1em rgba(0, 0, 0, 0.432);
+    align-items: center;
+    justify-content: center;
+    width: 650px;
+    height: 500px;
+    margin: auto;
+    margin-top: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container-login {
+    margin: 2em;
+    padding: 1.2em;
+    background-color: #51e9df;
+    width: 310px;
+    height: 230px;
+    border-radius: .5em;
+}
+
+.container-login > h3 {
+    text-align: center;
+    margin: .3em;
+}
+p {
+    margin: .3em;
+}
+
+.main-login label {
+    margin-right: .5em;
+}
+
+.main-login h2{
+    padding: .3em;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.btn-login {
+   width: 310px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border: 0;
+    border-radius: .5em;
+}
+
+input {
+    outline: none;
+    border-radius: .5em;
+}
+
+input:focus {
+    border: #FF5F5D 1px solid;
+    outline: #df7574 1px solid;
+}
+
+
+.btn-login:hover {
+    transition: .1s;
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: #FF5F5D;
+    box-shadow: .3em .3em 1em rgba(0, 0, 0, 0.473);
+}
+
+.container-login > span, a{
+    font-size: .8em;
+}
+
+
+.container-login  a{
+    color: black;
+    text-decoration-color: gray;
+    text-decoration: underline;
+}
+
+.container-login a:hover{
+    color: #FF5F5D;
+}

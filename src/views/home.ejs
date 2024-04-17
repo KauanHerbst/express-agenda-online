@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Online</title>
+   
+</head>
+<body>
+    <header class="header-home">
+        <a href="/"><span class="title-header">Agenda Online</span></a>
+        <% if(!session.user) { %>
+            <a href="/login" id="btnLoginHeader">Login</a>
+        <% } %> 
+        <% if(session.user) { %>
+            <a href="/profile" class="profile-header" id="meuPerfil"><span>Meu Perfil</span><img src="assets/images/profile.png" width="30px" height="30px"></a>
+        <% } %> 
+    </header>
+    <main class="main-home">
+        <h3>Contatos Cadastrados</h3>
+        <h2>Seus Contatos Abaixo</h2>
+
+        <%- include('includes/messages') %>
+
+        <div class="container-contatos">
+           <table class="table-contatos">
+            <% if(contatos.length > 0){ %>
+                <% contatos.forEach(contato => { %>
+                    <tr>
+                        <td><%- contato.nome %> </td>
+                        <td><%- contato.sobrenome %> </td>
+                        <td><%- contato.email %> </td>
+                        <td><%- contato.telefone %> </td>
+                        <td><a class="btnApagarContato" href="contato/edit/<%- contato.id %>">Editar</a></td>
+                        <td><a class="btnApagarContato" href="contato/delete/<%- contato.id %>">Apagar</a></td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <span id="contato-void">Contatos Vazios</span>
+            <% } %>
+           </table>
+        </div>
+        <div class="btnAd">
+            <a href="/contato" class="btnADD">Adicionar Contatos</a>
+        </div>
+    </main>
+    <script src="assets/js/bundle.js"></script>
+</body>
+</html>

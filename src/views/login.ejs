@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Login</title>
+</head>
+<body>
+    <header class="header-login">
+        <a href="/"><span class="title-header">Agenda Online</span></a>
+    </header>
+    <main class="main-login">
+        <h2>Fazer Login Agenda Online</h2>
+
+        <%- include('includes/messages') %>
+
+        <div class="container-login">
+            <h3>Login</h3>
+            <form action="/login" method="post">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <p><label for="email">Email:</label><input type="email" name="email" id="email" required></p>
+                <p><label for="senha">Senha:</label><input type="password" name="senha" id="senha" required></p>
+                <button class="btn-login">Login</button>
+            </form>
+            <span>Não possui uma conta? <a href="/new">Clique Aqui</a></span>
+        </div>
+    </main>
+    <script src="assets/js/bundle.js"></script>
+</body>
+</html>

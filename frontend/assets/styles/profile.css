@@ -1,0 +1,49 @@
+.main-perfil {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: .5em;
+    box-shadow: .3em .3em 1em rgba(0, 0, 0, 0.432);
+    width: 650px;
+    height: 500px;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.main-perfil h2 {
+    text-align: center;
+    margin: .7em
+}
+
+.main-perfil span{
+    margin: .7em;
+    
+}
+
+.divBtnD {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btnDesconectar {
+    display: flex;
+    width: 135px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    border: 0;
+    border-radius: .5em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnDesconectar:hover {
+    transition: .1s;
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: #FF5F5D;
+    box-shadow: .3em .3em 1em rgba(0, 0, 0, 0.473);
+}

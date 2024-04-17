@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Criar Conta</title>
+</head>
+<body>
+    <header class="header-new">
+        <a href="/"><span class="title-header">Agenda Online</span></a>
+    </header>
+    <main class="main-new">
+        <h2>Criar Conta Agenda Online</h2>
+
+        <%- include('includes/messages') %>
+
+        <div class="container-criar">
+            <h3>Criar Conta</h3>
+            <form action="/new" method="post">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <p><label for="nome">Nome:</label><input type="text" name="nome" id="nome" required></p>
+                <p><label for="email">Email:</label><input type="email" name="email" id="email" required></p>
+                <p><label for="senha">Senha:</label><input type="password" name="senha" id="senha" required></p>
+                <button class="btn-criar">Criar Conta</button>
+            </form>
+            <span>Já possui uma conta? <a href="/login">Clique Aqui</a></span>
+        </div>
+    </main>
+    <script src="assets/js/bundle.js"></script>
+</body>
+</html>
